@@ -51,3 +51,5 @@ gem 'simple_form'
 gem 'coffee-script-source', '1.8.0'
 
 gem 'devise'
+
+gem 'gravatarify', '~> 3.0.0' 
