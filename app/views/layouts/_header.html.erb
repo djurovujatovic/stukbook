@@ -20,8 +20,10 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
         <li><a href="#">Timeline</a></li>
         <li><%= link_to "People", users_path %></li>
+        <% end %>
 
         <% if current_user %>
         <li class="dropdown">
