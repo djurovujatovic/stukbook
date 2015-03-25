@@ -4,7 +4,7 @@
   <div class="col-lg-2">
 
     <div class="row">
-      <%= gravatar_tag @user.email, size: 195 %><br/><br/>
+      <%= gravatar_tag @user.email, size: 195 %><br/><h3><%= @user.firstname %> <%= @user.lastname %></h3><br/>
       <!-- Friend Zone -->
       <div class="panel panel-default">  
         <div class="panel-heading">Friends <span class="badge"><%= link_to @user.active_friends.size, users_path(people: "friends") %></span>
@@ -18,18 +18,16 @@
         </div>
       </div>
 
-      
+
       <p><i class="fa fa-map-marker"></i> Lives in<br/>
-      Milwaukee, WI</p>
+      <%= @user.city %>, <%= @user.state %></p>
 
-      <p>Born on</p>
-
-      <h3><%= @user.username %></h3>
-      <p>Age: <%= @user.age %> </p>
-      <p>Gender: <%= @user.gender %></p>
+      <p><i class="fa fa-building-o"></i> Attends Church at<br/>
+      <%= @user.church %></p>
 
       <h3>Who am I</h3>
       <small><%= @user.bio %></small>
+
 
     </div>
   </div>
