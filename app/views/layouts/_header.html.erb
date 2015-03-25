@@ -8,20 +8,41 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "StukBook", root_path, class: "navbar-brand" %>
-    </div>
+
+
+      <div class="col-lg-8" style="padding-top: 10px;">
+        <div class="input-group">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default">Search</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">By First Name</a></li>
+              <li><a href="#">By Last Name</a></li>
+              <li class="divider"></li>
+              <li><a href="#">By City</a></li>
+              <li><a href="#">By State</a></li>
+              <li><a href="#">By Country</a></li>
+              <li class="divider"></li>
+              <li><a href="#">By Church</a></li>
+            </ul>
+          </div>
+          <input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+        </div><!-- /.input-group -->
+      </div>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        
-        
-        
+              
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-        <li><a href="#">Timeline</a></li>
+        <li><%= link_to "Timeline", root_path %></li>
         <li><%= link_to "People", users_path %></li>
         <% end %>
 
@@ -36,7 +57,7 @@
           </ul>
         </li>
         <% else %>
-        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><button type="button" class="btn btn-default navbar-btn"><%= link_to "Login", new_user_session_path %></button></li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->

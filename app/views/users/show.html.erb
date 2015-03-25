@@ -26,7 +26,8 @@
   <!-- Friend Zone -->
     <div class="col-md-3">
       <div class="panel panel-default">  
-        <div class="panel-heading">Friends (<%= @user.active_friends.size %>)
+        <div class="panel-heading">Friends <%= link_to @user.active_friends.size, users_path(people: "friends"), class: "btn btn-default #{'active' if params[:people] == 'friends'}" %>
+
         </div>
         <div class="panel-body">
           <% @user.active_friends.last(16).each do |user| %>
