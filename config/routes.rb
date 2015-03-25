@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+Stukbook::Application.routes.draw do
   devise_for :users, controllers: {registrations: 'registrations'}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       put :accept
     end
   end
+  resources :posts, only: [:create, :edit, :update, :destroy]
 
 
   # Example of regular route:
