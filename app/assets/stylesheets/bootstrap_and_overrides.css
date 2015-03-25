@@ -31,3 +31,7 @@
 	.badge a {
 		color:white;
 	}
+
+	textarea#post_content {
+		height: 135px;
+	}
