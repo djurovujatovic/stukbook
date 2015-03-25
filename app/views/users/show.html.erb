@@ -26,7 +26,7 @@
   <!-- Friend Zone -->
     <div class="col-md-3">
       <div class="panel panel-default">  
-        <div class="panel-heading">Friends <%= link_to @user.active_friends.size, users_path(people: "friends"), class: "btn btn-default #{'active' if params[:people] == 'friends'}" %>
+        <div class="panel-heading">Friends <span class="badge"><%= link_to @user.active_friends.size, users_path(people: "friends") %></span>
 
         </div>
         <div class="panel-body">
